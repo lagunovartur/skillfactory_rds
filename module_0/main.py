@@ -2,6 +2,7 @@ import numpy as np
 
 
 def game_core_v1(number):
+
     """ Функция угадывает число (number) в заданном интервале и возвращает число попыток, за которое удалось это сделать.
         Параметры:
             number - int/float - угадываемое число
@@ -17,6 +18,7 @@ def game_core_v1(number):
     bottom = 1
 
     while True:
+
         count += 1
         predict = np.random.randint(bottom, top)  # предполагаемое число
 
@@ -42,6 +44,7 @@ def score_game(game_core):
         count_ls.append(game_core(number))
     score = int(np.mean(count_ls))
     print(f"Ваш алгоритм угадывает число в среднем за {score} попыток")
+
     return score
 
 
